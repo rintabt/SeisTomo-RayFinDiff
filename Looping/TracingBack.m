@@ -82,7 +82,6 @@ else
         if Pilih.display_gambar == 2 %Plot ray per sel
             plot([xa xb],[za zb],'-','LineWidth',1.5)
             axis([min([xa xb])-2 max([xa xb])+2 min([za zb])-2 max([za zb])+2])
-%             pause 
         end
 
         x = x2; z = z2; xa = xb; za = zb;

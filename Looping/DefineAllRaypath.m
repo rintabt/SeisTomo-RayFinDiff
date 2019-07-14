@@ -47,7 +47,6 @@ while Temp.src_ke < N.src % Forward (per-src) & Telusur raypath (per-rec)
         plot_KonturWavefront(Model,Ray.time_2D{Temp.src_ke}, 150)
         plot_GridSel (Model, 'k','w')
         plot_SR(SR, 1.5,0)
-%         pause
     end
     
     Temp.rec_ke = 0;
@@ -60,14 +59,10 @@ while Temp.src_ke < N.src % Forward (per-src) & Telusur raypath (per-rec)
        
         if Pilih.IF == 2 && Pilih.display_log == 1 %Keterangan src dan rec ke berapa
             clc
-%             disp '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-%             disp '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
             if Indeks.i>1
                 disp '}'
             end
             disp (['{   [src rec] = ' num2str([Temp.src_ke Temp.rec_ke])])
-%             disp '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-%             disp '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
         end
         if Pilih.IF==2 && Pilih.display_gambar==2
             title(['Model ' Model.nama ' [src rec : ' num2str([Temp.src_ke Temp.rec_ke]) ']'])
@@ -93,10 +88,7 @@ while Temp.src_ke < N.src % Forward (per-src) & Telusur raypath (per-rec)
                 pause(1)
             end
         end
-        
-
     end
-%     pause
 end
 
 if Pilih.IF == 2 %Hitung Selisih dan plot (if Pilih.display_gambar == 1)

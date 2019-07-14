@@ -31,7 +31,7 @@ while isempty(xb)==1
                 xb=x(2); 
                 zb=z(1);
                 x2=x+1;
-                z2=z-1; % sebelumnya : z
+                z2=z-1; 
                 kondisi2='3';
             end
             if teta>0 && teta<(90-alfa1)
@@ -63,10 +63,10 @@ while isempty(xb)==1
                 xb=x(1) ;
                 zb=z(4);
                 x2=x-1;
-                z2=z+1; %Sebelumnya : z=z+1
+                z2=z+1; 
                 kondisi2='2';
             end
-            if teta>90+alfa2 && teta<180 %sebelumnya : teta<=180
+            if teta>90+alfa2 && teta<180 
                 ket = 'sudut 6';
                 xb=x(1);
                 zb=za-(xa-x(1))*tand(teta);
@@ -74,7 +74,7 @@ while isempty(xb)==1
                 z2=z;
                 kondisi2='kanan';
             end
-            if teta>=180 && teta <270 %sebelumnya : teta>180
+            if teta>=180 && teta <270 
                 ket = 'sudut 7';
                 xb=x(1);
                 zb=z(1);
@@ -126,7 +126,7 @@ while isempty(xb)==1
                 z2=z-1;
                 kondisi2='3';
             end
-            if teta>270+alfa2 && teta<360 %Sebelumnya : teta<=360
+            if teta>270+alfa2 && teta<360
                 ket = 'sudut 6';
                 xb=x(2);
                 zb=za+(x(2)-xa)*tand(teta);
@@ -134,7 +134,7 @@ while isempty(xb)==1
                 z2=z;
                 kondisi2='kiri ';
             end
-            if teta>=0 && teta<90 %Sebelumnya : teta>0
+            if teta>=0 && teta<90 
                 ket = 'sudut 7';
                 xb=x(2);
                 zb=z(4);
@@ -186,15 +186,15 @@ while isempty(xb)==1
                 z2=z-1;
                 kondisi2='4';
             end
-            if teta>180+alfa2 && teta<270 %Sebelumnya : teta<=270
+            if teta>180+alfa2 && teta<270
                 ket = 'sudut 6';
-                xb=xa-(za-z(1))*cotd(teta); %Sebelumnya (sama aja sih sebenernya...): xa+(z(1)-za)*cotd(teta)
+                xb=xa-(za-z(1))*cotd(teta);
                 zb=z(1);
                 x2=x;
                 z2=z-1;
                 kondisi2='bawah';
             end
-            if teta>=270 && teta<360 %Sebelumnya : teta>270
+            if teta>=270 && teta<360 
                 ket = 'sudut 7';
                 xb=x(2);
                 zb=z(1);
@@ -216,7 +216,7 @@ while isempty(xb)==1
             end
             if teta>270 && teta<360-alfa1
                 ket = 'sudut 2';
-                xb=xa-(za-z(1))*cotd(teta); %Sebelumnya : xb=xa+(za-z(1))*cotd(teta)
+                xb=xa-(za-z(1))*cotd(teta); 
                 zb=z(1);
                 x2=x;
                 z2=z-1;
@@ -230,7 +230,7 @@ while isempty(xb)==1
                 z2=z-1;
                 kondisi2='3';
             end
-            if teta>360-alfa1 || teta<alfa2 %Sebelumnya : teta>360-alfa1 && teta+360<360+alfa2
+            if teta>360-alfa1 || teta<alfa2 
                 ket = 'sudut 4';
                 xb=x(2);
                 zb=za+h*tand(teta);
@@ -254,7 +254,7 @@ while isempty(xb)==1
                 z2=z+1;
                 kondisi2='atas ';
             end
-            if teta>=90 && teta<=180 %Sebelumnya : teta>90
+            if teta>=90 && teta<=180 
                 ket = 'sudut 7';
                 xb=x(1);
                 zb=z(4);
@@ -287,7 +287,7 @@ while isempty(xb)==1
             if teta<teta2
                 ket = 'sudut 2';
                 zb=z(3);
-                xb=xa+(z(4)-za)*cotd(teta); %Sebelumnya : tand
+                xb=xa+(z(4)-za)*cotd(teta); 
                 x2=x;
                 z2=z+1;
                 kondisi2='atas ';
@@ -303,7 +303,7 @@ while isempty(xb)==1
             if teta<teta3
                 ket = 'sudut 3';
                 xb=x(1);
-                zb=za-(xa-x(1))*tand(teta); %Sebelumnya (sama aja sih...) : zb=za+(x(1)-xa)*tand(teta)
+                zb=za-(xa-x(1))*tand(teta); 
                 x2=x-1;
                 z2=z;
                 kondisi2='kanan';
@@ -319,7 +319,7 @@ while isempty(xb)==1
             if teta<teta4
                 ket = 'sudut 4';
                 zb=z(1);
-                xb=xa-(za-z(1))*cotd(teta); %Sebelumnya : xb=xa+(x(2)-xa)*tand(teta);
+                xb=xa-(za-z(1))*cotd(teta);
                 x2=x;
                 z2=z-1;
                 kondisi2='bawah';
@@ -338,11 +338,11 @@ while isempty(xb)==1
     % a di grid point
     if length(kondisi)==1 
         if kondisi=='1' 
-            if teta<=360 && teta>=270 %Sebelumnya : teta>270
+            if teta<=360 && teta>=270
                 ket = 'kuadran 4';
                 xb=x(2); 
                 zb=z(1);
-                x2=x+1; % Kanan atas
+                x2=x+1;
                 z2=z-1;
                 kondisi2='3';
             end
@@ -350,14 +350,14 @@ while isempty(xb)==1
                 ket = 'kuadran 1a';
                 xb=x(2);
                 zb=za+h*tand(teta);
-                x2=x+1; % Kanan
+                x2=x+1; 
                 z2=z;
                 kondisi2='kiri ';
             end
             if teta==45
                 ket = '45';
-                xb=x(4); %Sebelumnya : xb=x(3)
-                zb=z(4); %Sebelumnya : zb=z(3)
+                xb=x(4); 
+                zb=z(4); 
                 x2=x+1;
                 z2=z+1;
                 kondisi2='1';
@@ -366,7 +366,7 @@ while isempty(xb)==1
                 ket = 'kuadran 1b';
                 xb=xa+h*cotd(teta);
                 zb=z(4);
-                x2=x; % Bawah
+                x2=x; 
                 z2=z+1;
                 kondisi2='atas ';
             end
@@ -374,13 +374,13 @@ while isempty(xb)==1
                 ket = 'kuadran 2';
                 xb=x(3);
                 zb=z(3);
-                x2=x-1; % Kiri bawah
+                x2=x-1; 
                 z2=z+1;
                 kondisi2='2';
             end
         end
         if kondisi=='2'
-            if teta>=0 && teta<=90 %Sebelumnya teta>0
+            if teta>=0 && teta<=90
                 ket = 'kuadran 1';
                 xb=x(2); 
                 zb=z(4);
@@ -440,7 +440,7 @@ while isempty(xb)==1
             end
             if teta>270 && teta<360-45
                 ket = 'kuadran 4a';
-                xb=xa-h*cotd(teta); %Sebelumnya : tidak ada h
+                xb=xa-h*cotd(teta);
                 zb=z(2);
                 x2=x;
                 z2=z-1;
@@ -500,7 +500,7 @@ while isempty(xb)==1
                 ket = 'kuadran 4';
                 xb=x(2);
                 zb=z(2);
-                x2=x+1; %Sebelumnya : x-1
+                x2=x+1;
                 z2=z-1;
                 kondisi2='3';
             end
