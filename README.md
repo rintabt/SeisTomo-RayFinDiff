@@ -1,5 +1,5 @@
 # SeisTomo-RayFinDiff
-Dibuat oleh : Rinta Bi Tari Erdyanti (2019)
+Dibuat oleh : Rinta Bi Tari Erdyanti (2019).
 Apabila ingin menggunakan script ini untuk publikasi, mohon untuk melakukan sitasi.
 
 Script ini merupakan script untuk inversi tomografi seismik berdasarkan forward modelling eikonal finite difference. 
