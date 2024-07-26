@@ -1,7 +1,7 @@
 # SeisTomo-RayFinDiff
 Modul ini telah terdaftar Hak Kekayaan Intelektual (Modul Tomografi Cross Hole Seismik menggunakan Script MATLAB, No. Pencatatan: 000645199)
 
-Dibuat oleh : Rinta Bi Tari Erdyanti (2019).
+Dibuat oleh : DD Warnana, JPGN Rochman, F Syaifuddin, ERB Tari (2019).
 Apabila ingin menggunakan script ini, mohon untuk melakukan sitasi.
 
 
